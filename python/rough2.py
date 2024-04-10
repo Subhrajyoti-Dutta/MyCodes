@@ -57,3 +57,4 @@ a = """    def prims(a_list):
         print("Minimum Cost is ", cost)"""
 
 print("\n".join(map(lambda x : x[4:],a.split("\n"))))
+print("yoyo")
