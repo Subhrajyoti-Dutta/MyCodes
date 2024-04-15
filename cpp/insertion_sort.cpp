@@ -24,6 +24,7 @@ int* InsertionSort(int arr[],int leng_arr) {
 		}
 		arr[j + 1] = key;
 	}
+	
 	return arr;
 }
 
