@@ -1,24 +1,32 @@
-a = """Displacement ( cc )
-Max Power
-Max Torque
-Mileage ( kmpl )
-Top Speed
-Riding Modes
-Transmission
-Transmission Type
-Gear Shifting Pattern
-Cylinders
-Bore
-Stroke
-Valves Per Cylinder
-Compression Ratio
-Ignintion
-Spark Plugs
-Colling System
-Clutch
-Fuel Delivery System
-Fuel Capacity ( Litre )
-Reserve Fule Capacity (litre)
-Emission Standard
-Fuel Type"""
-print(*a.split("\n"),sep="\",\"")
+import numpy as np
+a = np.array([
+    ['#','*','*','*','*'],
+    ['#','#','*','*','*'],
+    ['#','#','*','#','*'],
+    ['#','#','#','#','*'],
+    ['#','#','#','#','#']
+])
+
+
+# print((a == '#').sum(axis = 0))
+
+# for i in range(5):
+#     print('#'*i + "*"*(5-i))
+
+a = """#####
+.####
+.####
+.####
+.#.#.
+.#...
+....."""
+b = [a[i::6] for i in range(5)]
+d = dict()
+for i in range(6):
+    d['#' + '#'*i + "."*(5-i) + '.'] = i
+
+# print(d)
+e=[]
+for i in range(5):
+    e.append(d[b[i]])
+print(e)
