@@ -65,7 +65,6 @@ class Mandelbrot():
 	def createImage(self, imageName, location = ""):
 		RGB = [self.divIter % 4 * 64, self.divIter % 8 * 32, self.divIter % 16 * 16]
 		self.img = np.stack(RGB, 2)
-		print(self.img.dtype)
 		img = Image.fromarray(self.img)
 		img.save(location + imageName)
 		# print(self.img.shape)
@@ -73,7 +72,7 @@ class Mandelbrot():
 
 
 if __name__ == '__main__':
-	mandelbrotSet = Mandelbrot(1000,1000)
+	mandelbrotSet = Mandelbrot(10000,10000)
 	mandelbrotSet.initialize()
 	mandelbrotSet.execute(iter = 100)
 	mandelbrotSet.createImage(imageName = "img.png")
